@@ -6,7 +6,7 @@ const validSsn2 = '9211292835'
 const validSsn3 = '0106013402'
 
 const ssnWithInvalidControlDigit = '8101013600'
-const ssnWithInvalidDate = '8109310278'
+const ssnWithInvalidDate = '8109310989'
 
 function ssnWithDash(input) {
   return input.substr(0, 6) + '-' + input.substr(6)
