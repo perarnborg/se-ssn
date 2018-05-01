@@ -31,3 +31,5 @@ export const isValidSsn = (input, inputOptions) => {
 
   return ssn.isValidSsn(input, options)
 }
+
+export const isValidSwedishSsn = isValidSsn
