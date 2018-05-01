@@ -11,12 +11,15 @@
   "main": "dist/se-ssn.cjs.js",
   "module": "dist/se-ssn.esm.js",
   "browser": "dist/se-ssn.umd.js",
-  "dependencies": {
-    "mocha": "^5.1.1",
-    "ms": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "mocha": "^5.1.1",
     "rollup": "^0.58.0",
+    "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.0.0"
   },
