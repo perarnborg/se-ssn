@@ -28,4 +28,6 @@ isValidSsn('8101013608', {minYears: 80})
 //=> false
 ```
 
+## License
+
 [MIT](LICENSE).
