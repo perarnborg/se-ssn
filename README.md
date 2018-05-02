@@ -2,6 +2,10 @@
 
 Validation for Swedish style organization numbers (organisationsnummer).
 
+The validation checks that the first 6 chars are a representation of a valid date from the last 100
+years (this behaviour can be configured, see Getting started) and that char 10 is a valid control
+digit based on the other characters.
+
 ## Getting started
 
 The library is available as an [npm package](https://www.npmjs.com/package/se-ssn).
