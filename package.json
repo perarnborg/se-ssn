@@ -1,7 +1,7 @@
 {
   "name": "se-ssn",
   "description": "Validation for Swedish style social security numbers (ssn/personnummer)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/perarnborg/se-ssn#readme",
   "license": "MIT",
   "repository": {
