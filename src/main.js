@@ -7,7 +7,7 @@ const defaultOptions = {
 
 const pattern = /^\d{6}[-|(\s)]{0,1}\d{4}$/
 
-function hasValidPattern(input) {
+export const hasValidPattern = function(input) {
   return pattern.test(input)
 }
 
