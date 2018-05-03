@@ -16,6 +16,14 @@ function leftPad(number) {
   return (number + '').length === 1 ? '0' + number : '' + number
 }
 
+function getIsoMonth(date) {
+  return leftPad(date.getMonth() + 1)
+}
+
+function getIsoDate(date) {
+  return leftPad(date.getDate())
+}
+
 export const isValidSsn = (input, options) => {
   const ssnDate = getSsnDate(input)
 
@@ -25,18 +33,21 @@ export const isValidSsn = (input, options) => {
   }
 
   // Check month
-  if (leftPad(ssnDate.getMonth() + 1) !== input.substr(2, 2)) {
+  if (getIsoMonth(ssnDate) !== input.substr(2, 2)) {
     return false
   }
 
   // Check date
-  if (leftPad(ssnDate.getDate()) !== input.substr(4, 2)) {
+  if (getIsoDate(ssnDate) !== input.substr(4, 2)) {
     return false
   }
 
   // Check min years
   if (options.minYears !== false && fullYearsFromDate(ssnDate) < options.minYears) {
-    return false
+    const birthdayToCheck = new Date((ssnDate.getFullYear() + parseInt(options.minYears, 10)) + '-' + getIsoMonth(ssnDate) + '-' + getIsoDate(ssnDate))
+    if(birthdayToCheck > new Date()) {
+      return false
+    }
   }
 
   return hasValidControlDigit(input)

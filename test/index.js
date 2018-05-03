@@ -33,7 +33,7 @@ describe('seSsn.isValidSsn', function() {
     assert.equal(seSsn.isValidSsn(ssnWithInvalidDate), false);
   });
 
-  it('should not pass with invalid that is younger than minYears', function() {
+  it('should not pass with valid ssn that is younger than minYears', function() {
     assert.equal(seSsn.isValidSsn(validSsn1, {minYears: 80}), false);
   });
 });
