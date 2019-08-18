@@ -48,6 +48,10 @@ seSsn.isValidSsn('8101013608')
 //=> true
 ```
 
+## Legacy support
+
+IE8 is not supported.
+
 ## License
 
 [MIT](LICENSE).
