@@ -14,10 +14,11 @@ export const hasValidPattern = function(input) {
 export const hasValidControlDigit = controlDigit.hasValidControlDigit
 
 export const isValidSsn = (input, inputOptions) => {
-  const options = {
-    ...defaultOptions,
-    ...inputOptions
-  }
+  const options = Object.assign(
+    {},
+    defaultOptions,
+    inputOptions
+  )
 
   input = input + ''
 
